@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.practice">
+    package="com.app.horse_app_update">
    <application
         android:label="practice"
         android:name="${applicationName}"

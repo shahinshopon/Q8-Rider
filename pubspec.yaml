@@ -30,20 +30,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.6.5 # for state management
-  flutter_screenutil: ^5.7.0 # for adapting screen and font size
-  google_fonts: ^4.0.4 # google fonts
-  intro_screen_onboarding_flutter: ^1.0.0 # intro
-  salomon_bottom_bar: ^3.3.2 #for bottom nav
-  get_storage: ^2.1.1 # store data locally
-  animated_text_kit:
-  animated_radio_buttons: ^1.0.0
-  syncfusion_flutter_gauges: ^21.2.3
-  pie_chart: ^5.3.2
-
-  d_chart: ^2.3.0
-  chart_sparkline: ^1.0.13
-  syncfusion_flutter_charts: ^21.2.4 
+  get: ^4.6.5
+  flutter_screenutil: ^5.9.0 # for responsive
+  intl_phone_field: ^3.2.0 # for phone number text
+  google_fonts: ^5.1.0 # for google fonts
+  animated_notch_bottom_bar: ^0.0.6 # animated bottom nav
+  image_picker: ^0.8.6+1 # to pick image/video
+  day_night_switcher: ^0.2.0+1 # for theme changing
+  get_storage: ^2.0.3 # local databse
+  carousel_slider: ^4.1.1
+  dots_indicator: ^2.1.0
+  time_picker_sheet: ^0.0.2+1
+  flutter_rating_bar: ^4.0.1
+  dotted_border: ^2.0.0+3 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -58,6 +57,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  change_app_package_name: ^1.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -71,6 +71,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/images/
     - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see

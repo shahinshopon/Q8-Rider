@@ -1,96 +1,66 @@
 import 'package:get/get.dart';
-import 'package:practice/ui/views/auth/forget_password.dart';
-import 'package:practice/ui/views/auth/login.dart';
-import 'package:practice/ui/views/auth/registration.dart';
-import 'package:practice/ui/views/bottom_nav_controller.dart';
-import 'package:practice/ui/views/nav_pages/home.dart';
-import 'package:practice/ui/views/not_found.dart';
-import 'package:practice/ui/views/splash.dart';
-import 'package:practice/ui/views/terms_condition.dart';
+import 'package:practice/ui/views/auth_pages/sign_in.dart';
+import 'package:practice/ui/views/auth_pages/sign_up.dart';
+import 'package:practice/ui/views/bottom_nav.dart';
+import 'package:practice/ui/views/bottom_pages/home_pages/action_screen/action_ended.dart';
+import 'package:practice/ui/views/bottom_pages/home_pages/best_seller.dart';
+import 'package:practice/ui/views/bottom_pages/home_pages/female_rider_page.dart';
+import 'package:practice/ui/views/bottom_pages/home_pages/home_details.dart';
+import 'package:practice/ui/views/bottom_pages/home_pages/storage_screen/storage.dart';
+import 'package:practice/ui/views/bottom_pages/home_pages/view_storage.dart';
+import 'package:practice/ui/views/bottom_pages/post_screen.dart';
 
-const String splash = '/splash-screen';
-const String unknown = '/not-found';
-const String login = '/login';
-const String registration = '/registration';
-const String forgetPass = '/forgetPass';
-const String terms = '/terms';
-const String bottomNav = '/bottomNav';
-const String number = '/number';
-const String next = '/next';
-const String letter = '/letter';
-const String firstStepresult = '/numberLetterresult';
-const String rulesOfBarinGame = '/rulesOfBarinGame';
-const String characterLetter = '/character-letter';
-const String characterNumber = '/character-number';
-const String summary = '/summary';
-const String showTotalresult = '/show-total-result';
+
+const String signUp = '/signUp-screen';
+const String signIn = '/signIn-screen';
+const String bottomNav = '/bottomNav-screen';
+const String horseSell = '/horseSell-screen';
+const String stores = '/stores-screen';
+const String bestSeller = '/bestSeller-screen';
+const String postScreen = '/postScreen-screen';
+const String femaleRiderScreen = '/femaleRider-screen';
+const String storageScreen = '/storage-screen';
+const String actionEndedScreen = '/actionEndedScreen-screen';
 
 List<GetPage> getPages = [
   GetPage(
-    name: unknown,
-    page: () => const Unknown(),
+    name: signUp,
+    page: () => SignUp(),
   ),
   GetPage(
-    name: splash,
-    page: () => const Splash(),
-  ),
-  GetPage(
-    name: login,
-    page: () => Login(),
-  ),
-  GetPage(
-    name: registration,
-    page: () => Registration(),
-  ),
-  GetPage(
-    name: forgetPass,
-    page: () => ForgetPassword(),
-  ),
-  GetPage(
-    name: terms,
-    page: () => const TermCondition(),
+    name: signIn,
+    page: () => SignIn(),
   ),
   GetPage(
     name: bottomNav,
-    page: () {
-      BottomNavController bottomNavController = Get.arguments;
-      return bottomNavController;
-    },
+    page: () => BottomNavController(),
   ),
   GetPage(
-    name: number,
-    page: () => NumberTestScreen(),
+    name: horseSell,
+    page: () => HomeDetailsScreen(),
   ),
   GetPage(
-    name: next,
-    page: () => ContinueWithLettersScreen(),
+    name: stores,
+    page: () => ViewStoresScreen(),
   ),
   GetPage(
-    name: letter,
-    page: () => LetterTestScreen(),
+    name: bestSeller,
+    page: () => BestSellerScreen(data: Get.arguments),
   ),
   GetPage(
-    name: firstStepresult,
-    page: () => FirstSecondStepResult(),
+    name: postScreen,
+    page: () => PostScreen(),
   ),
   GetPage(
-    name: rulesOfBarinGame,
-    page: () => RulesOfMemoryGame(),
+    name: femaleRiderScreen,
+    page: () => FemaleRiderScreen(data: Get.arguments),
   ),
   GetPage(
-    name: characterLetter,
-    page: () => BrainTestLetter(),
+    name: storageScreen,
+    page: () => StorageScreen(),
   ),
   GetPage(
-    name: characterNumber,
-    page: () => BrainTestNumber(),
-  ),
-  GetPage(
-    name: summary,
-    page: () => SummaryScreen(),
-  ),
-  GetPage(
-    name: showTotalresult,
-    page: () => ShowTotalResult(),
+    name: actionEndedScreen,
+    page: () => ActionEndedScreen(),
   ),
 ];
